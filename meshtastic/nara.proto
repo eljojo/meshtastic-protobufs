@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package meshtastic;
+
+option csharp_namespace = "Meshtastic.Protobufs";
+option go_package = "github.com/meshtastic/go/generated";
+option java_outer_classname = "NaraProtos";
+option java_package = "com.geeksville.mesh";
+option swift_prefix = "";
+
+message NaraMessage {
+  message Poem {
+    string base = 1; // seed of poem
+    uint32 counter = 2; // integer that represents
+    bytes hash = 3; // 256-bit hash of base+counter
+  }
+
+  enum MessageType {
+    GREETING = 0;
+    PRESENT = 1;
+  }
+
+  MessageType type = 1;
+  Poem poem = 2;
+}

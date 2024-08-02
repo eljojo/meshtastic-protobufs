@@ -215,6 +215,11 @@ enum PortNum {
   ATAK_FORWARDER = 257;
 
   /*
+   * Nara: NOT A ROBOTIC ANIMAL -- tamagotchi for meshtastic
+   */
+  NARA_APP = 258;
+
+  /*
    * Currently we limit port nums to no higher than this value
    */
   MAX = 511;
