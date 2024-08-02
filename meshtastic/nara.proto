@@ -9,10 +9,9 @@ option java_package = "com.geeksville.mesh";
 option swift_prefix = "";
 
 message NaraMessage {
-  message Poem {
-    string base = 1; // seed of poem
-    uint32 counter = 2; // integer that represents
-    bytes hash = 3; // 256-bit hash of base+counter
+  message Haiku {
+    string text = 1;
+    uint32 signature = 2; // integer that helps derive good-looking SHA256 signature
   }
 
   enum MessageType {
@@ -21,5 +20,5 @@ message NaraMessage {
   }
 
   MessageType type = 1;
-  Poem poem = 2;
+  Haiku haiku = 2;
 }
