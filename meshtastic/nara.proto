@@ -15,8 +15,10 @@ message NaraMessage {
   }
 
   enum MessageType {
-    GREETING = 0;
-    PRESENT = 1;
+    HELLO = 0;
+    GAME_INVITE = 1;
+    GAME_ACCEPT = 1;
+    GAME_TURN = 1;
   }
 
   MessageType type = 1;
